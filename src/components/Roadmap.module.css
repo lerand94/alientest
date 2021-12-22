@@ -1,0 +1,217 @@
+.roadmap {
+  background-color: #f5f5f5;
+  padding-bottom: 140px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.roadmap h2 {
+  color: #12111f;
+  padding-top: 130px;
+  padding-bottom: 73px;
+}
+.roadmapList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.roadmapList > li {
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+.roadmapList > li::after {
+  content: "";
+  width: 2px;
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.roadmapList > li:last-child::after {
+  display: none;
+}
+.left {
+  justify-content: end;
+}
+.roadmapListNum {
+  width: 109px;
+  height: 109px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ea1dff 0%, #9837ff 50.52%, #504eff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Martian";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 30px;
+  color: #efeff0;
+  flex: none;
+}
+.roadmapListBox {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px 30px;
+  max-width: 497px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.roadmapListBox > h3 {
+  font-family: "Martian";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: linear-gradient(180deg, #d923ff 0%, #9b37ff 48.44%, #6748ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 17px;
+}
+.roadmapListBox > p {
+  font-family: "Montserrat";
+}
+.roadmapListBoxLeft {
+  margin-left: 150px;
+}
+.roadmapListBoxLeft::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  width: 100px;
+  height: 2px;
+  left: -125px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.roadmapListBoxRight {
+  margin-right: 150px;
+}
+.roadmapListBoxRight::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  width: 100px;
+  height: 2px;
+  right: -125px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.half {
+  width: calc(50% + 55px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.maliyRelative {
+  position: relative;
+}
+
+.maliy1 {
+  position: absolute;
+  background-image: url("../assets/maliy.png");
+  background-repeat: no-repeat;
+  left: -98px;
+  bottom: 7px;
+  width: 112px;
+  height: 200px;
+}
+.maliyPos {
+  margin-left: 78px;
+}
+.maliy2 {
+  position: absolute;
+  background-image: url("../assets/maliy2.png");
+  background-repeat: no-repeat;
+  top: -165px;
+  right: 58px;
+  width: 250px;
+  background-size: contain;
+  height: 200px;
+}
+
+@media (max-width: 1560px) {
+  .maliyPos {
+    margin-left: 78px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .roadmap {
+    padding-bottom: 50px;
+  }
+  .roadmap h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .roadmapListBoxRight {
+    margin-right: 50px;
+  }
+  .roadmapListBoxLeft {
+    margin-left: 50px;
+  }
+  .roadmapListBoxLeft::after {
+    left: -52px;
+  }
+  .roadmapListBoxRight::after {
+    right: -52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmapListBox {
+    padding: 15px;
+  }
+  .roadmapListBoxLeft::after {
+    left: -125px;
+    width: 100%;
+  }
+  .roadmapListBoxRight::after {
+    right: -125px;
+    width: 100%;
+  }
+  .half {
+    width: 100%;
+  }
+  .roadmapList > li {
+    margin-bottom: 30px;
+  }
+  .roadmapList > li:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapListNum {
+    width: 60px;
+    height: 60px;
+  }
+  .roadmapListBoxLeft::after {
+    left: -50px;
+    top: 30px;
+  }
+  .roadmapListBoxRight::after {
+    right: -50px;
+    top: 30px;
+  }
+  .maliy1 {
+    display: none;
+  }
+  .maliy2 {
+    display: none;
+  }
+  .maliyPos {
+    margin-left: 0;
+  }
+  .roadmapListBox h3 {
+    margin-top: 0;
+  }
+}

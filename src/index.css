@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: local("MontserratBold"),
+    url(./assets/fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(./assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Martian";
+  src: local("Martian"),
+    url(./assets/fonts/martian_wars/Martian\ Wars.ttf) format("truetype");
+}
+
+button {
+  background: #4c19ba !important;
+  box-shadow: 0px 4px 24px rgba(76, 25, 186, 0.25);
+  border-radius: 15px;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  outline: none;
+  color: #fff;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+}
+
+button > img {
+  margin-left: 27px;
+}
+.swiper-slide-active {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1.3);
+}
+.swiper-slide {
+  transition: 0.3s;
+}
+.swiper-slide img {
+  width: 100%;
+}
+.swiper {
+  /* overflow: revert !important; */
+  /* overflow-y: visible !important; */
+  /* overflow-x: hidden !important; */
+  margin: 0 43px !important;
+  padding-bottom: 180px !important;
+  padding-top: 50px !important;
+}
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 10px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-radius: 10px !important;
+}
+
+.swiper-pagination {
+  bottom: 40px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important;
+}
+
+.accordion {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.accordion__item {
+  border: 5px solid;
+  border-image-source: linear-gradient(180deg, #ea1dff 0%, #504eff 100%);
+  background: rgba(255, 255, 255, 0.2);
+  border-image-slice: 1;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.accordion__item + .accordion__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 75px;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 0 12px 100px;
+  /* width: 100%; */
+  text-align: left;
+  position: relative;
+}
+.accordion__button > p {
+  width: calc(100% - 50px);
+  margin: 0;
+}
+
+.accordion__button:hover {
+  /* background-color: #ddd; */
+}
+
+.accordion__button:before {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  /* margin-right: 62px;
+  border-bottom: 4px solid currentColor;
+  border-right: 4px solid currentColor;
+  transform: rotate(45deg); */
+  font-size: 48px;
+  line-height: 58px;
+}
+.accordion__button:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  right: 42px;
+  top: 38px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../src/assets/cross.svg");
+}
+
+.accordion__button[aria-expanded="true"]::after,
+.accordion__button[aria-selected="true"]::after {
+  transform: rotate(-45deg);
+  /* top: 58px; */
+}
+.accordion__button[aria-expanded="true"],
+.accordion__button[aria-selected="true"] {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  padding: 0 0 36px 100px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  animation: fadein 0.35s ease-in;
+  margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 16px;
+  top: 16px;
+  display: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 1200px) {
+  /* body {
+    padding: 0 16px;
+  } */
+
+  /* .bm-burger-button {
+    display: block;
+  } */
+}
+
+@media (max-width: 992px) {
+  .bm-burger-button {
+    width: 36px;
+    height: 30px;
+    right: 16px;
+    top: 20px;
+  }
+  .accordion__button {
+    line-height: 38px;
+    padding: 30px 12px;
+  }
+  .accordion__button > p {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion__panel {
+    padding: 0 20px 0 20px;
+    font-size: 12px;
+  }
+  .accordion__button {
+    padding: 30px 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,48 @@
+nav {
+  max-width: 435px;
+  width: 100%;
+  margin-right: 58px;
+}
+nav ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-between;
+}
+nav ul > li {
+  font-family: "MontserratBold";
+}
+nav ul > li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+@media (max-width: 992px) {
+  nav {
+    max-width: 320px;
+    margin-right: 20px;
+  }
+  nav a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
